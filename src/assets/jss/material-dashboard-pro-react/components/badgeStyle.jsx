@@ -14,8 +14,9 @@ import {
 
 const badgeStyle = {
   badge: {
-    borderRadius: "12px",
-    padding: "20px 30px",
+    borderRadius: "1px",
+    padding: "10px 20px",
+    margin: "1px",
     textTransform: "uppercase",
     fontSize: "14px",
     fontWeight: "700",

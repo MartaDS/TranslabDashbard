@@ -13,15 +13,12 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Hidden from "@material-ui/core/Hidden";
-import Collapse from "@material-ui/core/Collapse";
 import Icon from "@material-ui/core/Icon";
 
 // core components
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 
 import sidebarStyle from "assets/jss/material-dashboard-pro-react/components/sidebarStyle.jsx";
-
-import avatar from "assets/img/faces/marc.jpg";
 
 var ps;
 
@@ -88,48 +85,15 @@ class Sidebar extends React.Component {
       bgColor,
       rtlActive
     } = this.props;
-    const itemText =
-      classes.itemText +
-      " " +
-      cx({
-        [classes.itemTextMini]: this.props.miniActive && this.state.miniActive,
-        [classes.itemTextMiniRTL]:
-          rtlActive && this.props.miniActive && this.state.miniActive,
-        [classes.itemTextRTL]: rtlActive
-      });
     const userWrapperClass =
       classes.user +
       " " +
       cx({
         [classes.whiteAfter]: bgColor === "white"
       });
-    const photo =
-      classes.photo +
-      " " +
-      cx({
-        [classes.photoRTL]: rtlActive
-      });
     var user = (
       <div className={userWrapperClass}>
-        <div className={photo}>
-          <img src={avatar} className={classes.avatarImg} alt="..." />
-        </div>
-        <List className={classes.list}>
-          <ListItem className={classes.item + " " + classes.userItem}>
-            <NavLink
-              to={"#"}
-              className={classes.itemLink + " " + classes.userCollapseButton}
-              onClick={() => this.openCollapse("openAvatar")}
-            >
-              <ListItemText
-                primary={rtlActive ? "تانيا أندرو" : "STOBART"}
-           
-                disableTypography={true}
-                className={itemText + " " + classes.userItemText}
-              />
-            </NavLink>
-          </ListItem>
-        </List>
+
       </div>
     );
     var links = (
@@ -139,108 +103,10 @@ class Sidebar extends React.Component {
             return null;
           }
           if (prop.collapse) {
-            const navLinkClasses =
-              classes.itemLink +
-              " " +
-              cx({
-                [" " + classes.collapseActive]: this.activeRoute(prop.path)
-              });
-            const itemText =
-              classes.itemText +
-              " " +
-              cx({
-                [classes.itemTextMini]:
-                  this.props.miniActive && this.state.miniActive,
-                [classes.itemTextMiniRTL]:
-                  rtlActive && this.props.miniActive && this.state.miniActive,
-                [classes.itemTextRTL]: rtlActive
-              });
-            const collapseItemText =
-              classes.collapseItemText +
-              " " +
-              cx({
-                [classes.collapseItemTextMini]:
-                  this.props.miniActive && this.state.miniActive,
-                [classes.collapseItemTextMiniRTL]:
-                  rtlActive && this.props.miniActive && this.state.miniActive,
-                [classes.collapseItemTextRTL]: rtlActive
-              });
-            const itemIcon =
-              classes.itemIcon +
-              " " +
-              cx({
-                [classes.itemIconRTL]: rtlActive
-              });
-            const caret =
-              classes.caret +
-              " " +
-              cx({
-                [classes.caretRTL]: rtlActive
-              });
             return (
               <ListItem key={key} className={classes.item}>
-                <NavLink
-                  to={"#"}
-                  className={navLinkClasses}
-                  onClick={() => this.openCollapse(prop.state)}
-                >
-                  <ListItemIcon className={itemIcon}>
-                    {typeof prop.icon === "string" ? (
-                      <Icon>{prop.icon}</Icon>
-                    ) : (
-                      <prop.icon />
-                    )}
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={prop.name}
-                    secondary={
-                      <b
-                        className={
-                          caret +
-                          " " +
-                          (this.state[prop.state] ? classes.caretActive : "")
-                        }
-                      />
-                    }
-                    disableTypography={true}
-                    className={itemText}
-                  />
-                </NavLink>
-                <Collapse in={this.state[prop.state]} unmountOnExit>
-                  <List className={classes.list + " " + classes.collapseList}>
-                    {prop.views.map((prop, key) => {
-                      if (prop.redirect) {
-                        return null;
-                      }
-                      const navLinkClasses =
-                        classes.collapseItemLink +
-                        " " +
-                        cx({
-                          [" " + classes[color]]: this.activeRoute(prop.path)
-                        });
-                      const collapseItemMini =
-                        classes.collapseItemMini +
-                        " " +
-                        cx({
-                          [classes.collapseItemMiniRTL]: rtlActive
-                        });
-                      return (
-                        <ListItem key={key} className={classes.collapseItem}>
-                          <NavLink to={prop.path} className={navLinkClasses}>
-                            <span className={collapseItemMini}>
-                              {prop.mini}
-                            </span>
-                            <ListItemText
-                              primary={prop.name}
-                              disableTypography={true}
-                              className={collapseItemText}
-                            />
-                          </NavLink>
-                        </ListItem>
-                      );
-                    })}
-                  </List>
-                </Collapse>
+               
+          
               </ListItem>
             );
           }
