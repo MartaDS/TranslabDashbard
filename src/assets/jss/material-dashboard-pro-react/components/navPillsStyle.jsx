@@ -13,7 +13,7 @@ import {
 
 const navPillsStyle = theme => ({
   root: {
-    marginTop: "10px",
+    marginTop: "0px",
     paddingLeft: "0",
     marginBottom: "0",
     overflow: "visible !important"
@@ -37,26 +37,26 @@ const navPillsStyle = theme => ({
     float: "left",
     position: "relative",
     display: "block",
-    borderRadius: "30px",
+    borderRadius: "20px",
     minWidth: "10px",
     textAlign: "center",
     transition: "all .3s",
-    padding: "10px 15px",
+    padding: "3px 8px",
     color: "#ffffff",
     backgroundColor: infoColor,
     height: "auto",
     opacity: "1",
     maxWidth: "100%",
-    margin: "0 5px"
+    margin: "0 2px"
   },
   pillsWithIcons: {
     borderRadius: "4px"
   },
   tabIcon: {
-    width: "30px",
-    height: "30px",
+    width: "20px",
+    height: "20px",
     display: "block",
-    margin: "10px 0"
+    margin: "8px 0"
   },
   horizontalPills: {
     width: "100%",
@@ -70,7 +70,7 @@ const navPillsStyle = theme => ({
     color: "inherit"
   },
   label: {
-    lineHeight: "12px",
+    lineHeight: "10px",
     fontSize: "10px",
     fontWeight: "300",
     position: "relative",
@@ -78,7 +78,7 @@ const navPillsStyle = theme => ({
     color: "inherit"
   },
   contentWrapper: {
-    marginTop: "20px"
+    marginTop: "0px"
   },
   primary: {
     "&,&:hover": {
