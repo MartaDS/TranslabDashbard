@@ -182,35 +182,31 @@ class Dashboard extends React.Component {
                         <Button
                         className={classes.marginRight}
                         onClick={() => this.handleClickOpen("noticeModal5")}
-                        > JXS 345 :
-                        </Button>
+                        > JXS 345
+                        </Button> =>>
                         <Button
                         color="danger"
-                        round
                         className={classes.marginRight}
                         onClick={() => this.handleClickOpen("noticeModal1")}
                         > 45 min
                         </Button>
                         <Button
                         color="warning"
-                        round
                         className={classes.marginRight}
                         onClick={() => this.handleClickOpen("noticeModal2")}
-                        > 1h
+                        > ...1h...
                         </Button>
                         <Button
                         color="success"
-                        round
                         className={classes.marginRight}
                         onClick={() => this.handleClickOpen("noticeModal3")}
-                        >    6h 35min
+                        >    .......6h 35min.......
                         </Button>
                         <Button
                         color="info"
-                        round
                         className={classes.marginRight}
                         onClick={() => this.handleClickOpen("noticeModal4")}
-                        >  2h
+                        >  ....2h....
                         </Button>
                         </div>
                   )
@@ -471,7 +467,6 @@ class Dashboard extends React.Component {
                           >
                             <Close className={classes.modalClose} />
                           </Button>
-                            <h4 className={classes.modalTitle}>X52 APH</h4>
                         </DialogTitle>
                         <DialogContent
                           id="notice-modal-slide-description"
@@ -487,7 +482,7 @@ class Dashboard extends React.Component {
                               <CardBody profile>
                                 <CardHeader>
                                 <h4 className={classes.cardTitle}>
-                                  STOPPED
+                                  X52 APH - STOPPED
                                 </h4>
                                 <h4 className={classes.cardTitle}>
                                   <Badge color="danger">45 min</Badge>
@@ -531,7 +526,6 @@ class Dashboard extends React.Component {
                           >
                             <Close className={classes.modalClose} />
                           </Button>
-                            <h4 className={classes.modalTitle}>X52 APH</h4>
                         </DialogTitle>
                         <DialogContent
                           id="notice-modal-slide-description"
@@ -547,17 +541,17 @@ class Dashboard extends React.Component {
                               <CardBody profile>
                                 <CardHeader>
                                 <h4 className={classes.cardTitle}>
-                                  RE-SITE
+                                  X52 APH - RE-SITE
                                 </h4>
                                 <h4 className={classes.cardTitle}>
                                   <Badge color="warning">1 h</Badge>
                                 </h4>
                                 <p className={classes.cardCategory}>
-                                  Manchester Doc (3.4095,4.59058)
+                                  Teeside Doc (3.4095,4.59058) => Manchester Yard (1.4095,3.59548)
                                 </p>
                                 </CardHeader>
                                 <CardBody>
-                                  13/09/18(03.45) - 13/09/18(04.45)
+                               
                                 </CardBody>
                               </CardBody>
                             </Card>
@@ -591,7 +585,6 @@ class Dashboard extends React.Component {
                           >
                             <Close className={classes.modalClose} />
                           </Button>
-                            <h4 className={classes.modalTitle}>X52 APH</h4>
                         </DialogTitle>
                         <DialogContent
                           id="notice-modal-slide-description"
@@ -607,7 +600,7 @@ class Dashboard extends React.Component {
                               <CardBody profile>
                                 <CardHeader>
                                 <h4 className={classes.cardTitle}>
-                                  TRANSIT
+                                  X52 APH - TRANSIT
                                 </h4>
                                 <h4 className={classes.cardTitle}>
                                   <Badge color="success">6 h 35 min</Badge>
@@ -650,7 +643,6 @@ class Dashboard extends React.Component {
                           >
                             <Close className={classes.modalClose} />
                           </Button>
-                            <h4 className={classes.modalTitle}>X52 APH</h4>
                         </DialogTitle>
                         <DialogContent
                           id="notice-modal-slide-description"
@@ -666,7 +658,7 @@ class Dashboard extends React.Component {
                             <CardBody profile>
                               <CardHeader>
                                 <h4 className={classes.cardTitle}>
-                                  LOADING
+                                  X52 APH - LOADING
                                 </h4>
                                 <h4 className={classes.cardTitle}>
                                   <Badge color="info">45 min</Badge>
@@ -708,7 +700,6 @@ class Dashboard extends React.Component {
                           >
                             <Close className={classes.modalClose} />
                           </Button>
-                            <h4 className={classes.modalTitle}>X52 APH - John Doe</h4>
                         </DialogTitle>
                         <DialogContent
                           id="notice-modal-slide-description"
