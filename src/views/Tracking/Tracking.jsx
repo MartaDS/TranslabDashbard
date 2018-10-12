@@ -718,10 +718,10 @@ class Dashboard extends React.Component {
                                   John Doe's Overall Performance
                                 </h4>
                                 <h4 className={classes.cardTitle}>
-                                  <Badge color="info">45 %</Badge>
-                                  <Badge color="info">10k</Badge>
-                                  <Badge color="info">89 %</Badge>
-                                  <Badge color="info">45 %</Badge>
+                                  <Badge color="info">3961 min waste</Badge>
+                                  <Badge color="info">£3169 waste</Badge>
+                                  <Badge color="info">9% time on charge</Badge>
+                                  <Badge color="info">19% performance</Badge>
                                 </h4>
                                 </CardHeader>
                                 <CardBody>
