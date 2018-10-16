@@ -90,6 +90,40 @@ class Dashboard extends React.Component {
     const { classes } = this.props;
     return (
       <div>
+        <GridContainer>
+          <GridItem xs={3}>
+            <Card>
+              <CardBody style={{ textAlign: "center" }}>
+                <h5 className={classes.cardTitle}>{`22%`}</h5>
+                <p className={classes.cardCategory}>{`Performance`}</p>
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={3}>
+            <Card>
+              <CardBody style={{ textAlign: "center" }}>
+                <h5 className={classes.cardTitle}>{`113163 min`}</h5>
+                <p className={classes.cardCategory}>{`Wasted`}</p>
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={3}>
+            <Card>
+              <CardBody style={{ textAlign: "center" }}>
+                <h5 className={classes.cardTitle}>{`£90530`}</h5>
+                <p className={classes.cardCategory}>{`Wasted`}</p>
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={3}>
+            <Card>
+              <CardBody style={{ textAlign: "center" }}>
+                <h5 className={classes.cardTitle}>{`9%`}</h5>
+                <p className={classes.cardCategory}>{`Time On-Charge`}</p>
+              </CardBody>
+            </Card>
+          </GridItem>
+        </GridContainer>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={8}>
             <h4 className={classes.pageSubcategoriesTitle}>
