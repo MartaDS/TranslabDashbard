@@ -15,10 +15,11 @@ const cardStyle = {
     position: "relative",
     display: "flex",
     flexDirection: "column",
-    minWidth: "0",
-    wordWrap: "break-word",
-    fontSize: ".875rem",
-    padding: "10px"
+    minWidth: "90px",
+    minHeight: "100px",
+    wordWrap: "normal",
+    padding: "1px 1px",
+    fontSize: ".575rem"
   },
   cardPlain: {
     background: "transparent",

@@ -19,6 +19,7 @@ import NavPills from "components/NavPills/NavPills.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import Card from "components/Card/Card.jsx";
+import Card1 from "components/Card/Card1.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
@@ -90,38 +91,38 @@ class Dashboard extends React.Component {
     const { classes } = this.props;
     return (
       <div>
-        <GridContainer>
+        <GridContainer justify="center">
           <GridItem xs={3}>
-            <Card>
-              <CardBody style={{ textAlign: "center" }}>
-                <h5 className={classes.cardTitle}>{`22%`}</h5>
-                <p className={classes.cardCategory}>{`Performance`}</p>
-              </CardBody>
-            </Card>
-          </GridItem>
-          <GridItem xs={3}>
-            <Card>
-              <CardBody style={{ textAlign: "center" }}>
-                <h5 className={classes.cardTitle}>{`113163 min`}</h5>
-                <p className={classes.cardCategory}>{`Wasted`}</p>
-              </CardBody>
-            </Card>
-          </GridItem>
-          <GridItem xs={3}>
-            <Card>
-              <CardBody style={{ textAlign: "center" }}>
+            <Card1>
+              <CardBody style={{ textAlign: "center", padding: "20px 0px" }}>
                 <h5 className={classes.cardTitle}>{`£90530`}</h5>
                 <p className={classes.cardCategory}>{`Wasted`}</p>
               </CardBody>
-            </Card>
+            </Card1>
           </GridItem>
           <GridItem xs={3}>
-            <Card>
-              <CardBody style={{ textAlign: "center" }}>
+            <Card1>
+              <CardBody style={{ textAlign: "center", padding: "20px 0px" }}>
+                <h5 className={classes.cardTitle}>{`113163 min`}</h5>
+                <p className={classes.cardCategory}>{`Wasted`}</p>
+              </CardBody>
+            </Card1>
+          </GridItem>
+          <GridItem xs={3}>
+            <Card1>
+              <CardBody style={{ textAlign: "center", padding: "20px 0px" }}>
+                <h5 className={classes.cardTitle}>{`22%`}</h5>
+                <p className={classes.cardCategory}>{`Performance`}</p>
+              </CardBody>
+            </Card1>
+          </GridItem>
+          <GridItem xs={3}>
+            <Card1>
+              <CardBody style={{ textAlign: "center", padding: "20px 0px" }}>
                 <h5 className={classes.cardTitle}>{`9%`}</h5>
                 <p className={classes.cardCategory}>{`Time On-Charge`}</p>
               </CardBody>
-            </Card>
+            </Card1>
           </GridItem>
         </GridContainer>
         <GridContainer justify="center">
