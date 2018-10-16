@@ -95,7 +95,7 @@ class Dashboard extends React.Component {
           <GridItem xs={3}>
             <Card1>
               <CardBody style={{ textAlign: "center", padding: "20px 0px" }}>
-                <h5 className={classes.cardTitle}>{`£90530`}</h5>
+                <h3 className={classes.cardTitle}>{`£90530`}</h3>
                 <p className={classes.cardCategory}>{`Wasted`}</p>
               </CardBody>
             </Card1>
@@ -103,7 +103,7 @@ class Dashboard extends React.Component {
           <GridItem xs={3}>
             <Card1>
               <CardBody style={{ textAlign: "center", padding: "20px 0px" }}>
-                <h5 className={classes.cardTitle}>{`113163 min`}</h5>
+                <h3 className={classes.cardTitle}>{`113163 min`}</h3>
                 <p className={classes.cardCategory}>{`Wasted`}</p>
               </CardBody>
             </Card1>
@@ -111,7 +111,7 @@ class Dashboard extends React.Component {
           <GridItem xs={3}>
             <Card1>
               <CardBody style={{ textAlign: "center", padding: "20px 0px" }}>
-                <h5 className={classes.cardTitle}>{`22%`}</h5>
+                <h3 className={classes.cardTitle}>{`22%`}</h3>
                 <p className={classes.cardCategory}>{`Performance`}</p>
               </CardBody>
             </Card1>
@@ -119,7 +119,7 @@ class Dashboard extends React.Component {
           <GridItem xs={3}>
             <Card1>
               <CardBody style={{ textAlign: "center", padding: "20px 0px" }}>
-                <h5 className={classes.cardTitle}>{`9%`}</h5>
+                <h3 className={classes.cardTitle}>{`9%`}</h3>
                 <p className={classes.cardCategory}>{`Time On-Charge`}</p>
               </CardBody>
             </Card1>
@@ -127,8 +127,7 @@ class Dashboard extends React.Component {
         </GridContainer>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={8}>
-            <h4 className={classes.pageSubcategoriesTitle}>
-            </h4>
+            <h4 className={classes.pageSubcategoriesTitle}></h4>
             <br />
             <NavPills
               color="warning"
@@ -140,7 +139,7 @@ class Dashboard extends React.Component {
                   tabContent: (
                     <Card>
                       <CardHeader>
-                        <h4 className={classes.cardTitle}>
+                        <h4 className={classes.cardTitle} style={{ textAlign: "center"}}>
                           Overall Performance
                         </h4>
                        
@@ -153,10 +152,10 @@ class Dashboard extends React.Component {
                         />
                       </CardBody>
                       <CardFooter stats className={classes.cardFooter}>
-                        <i className={"fas fa-circle " + classes.info} /> Deadhead Resiting{` `}
-                        <i className={"fas fa-circle " + classes.warning} /> Deadhead Stopped{` `}
-                        <i className={"fas fa-circle " + classes.danger} /> Transit{` `}
-                        <i className={"fas fa-circle " + classes.success} /> Loading{` `}
+                        <i className={"fas fa-circle " + classes.info} /> Loading/Unloading{` `}
+                        <i className={"fas fa-circle " + classes.warning} /> Deadhead Re-siting{` `}
+                        <i className={"fas fa-circle " + classes.danger} /> Deadhead Stopped{` `}
+                        <i className={"fas fa-circle " + classes.success} /> Transit{` `}
                       </CardFooter>
                     </Card>
                   )
@@ -167,7 +166,7 @@ class Dashboard extends React.Component {
                   tabContent: (
                     <Card>
                       <CardHeader>
-                        <h4 className={classes.cardTitle}>
+                        <h4 className={classes.cardTitle} style={{ textAlign: "center"}}>
                           Performance Distribution
                         </h4>
                       </CardHeader>
