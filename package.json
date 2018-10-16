@@ -16,6 +16,7 @@
     "react": "16.5.2",
     "react-big-calendar": "0.20.1",
     "react-bootstrap-sweetalert": "4.4.1",
+    "react-calendar-timeline": "^0.20.0",
     "react-chartist": "0.13.1",
     "react-datetime": "2.15.0",
     "react-dom": "16.5.2",
@@ -26,7 +27,9 @@
     "react-swipeable-views": "0.13.0",
     "react-table": "6.8.6",
     "react-tagsinput": "3.19.0",
-    "react-timeseries-charts": "^0.15.3"
+    "react-timeline-9000": "^1.0.8",
+    "react-timeseries-charts": "^0.15.3",
+    "vis": "^4.21.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",

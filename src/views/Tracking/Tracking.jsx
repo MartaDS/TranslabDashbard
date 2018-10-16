@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Timeline from "react-calendar-timeline";
 // react plugin for creating charts
 // react plugin for creating vector maps
 
@@ -28,6 +29,8 @@ import GridItem from "components/Grid/GridItem.jsx";
 import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
+import "react-calendar-timeline/lib/Timeline.css";
+import moment from 'moment'
 
 import avatar from "assets/img/faces/marc.jpg";
 
@@ -97,6 +100,51 @@ class Dashboard extends React.Component {
   };
   render() {
     const { classes } = this.props;
+    const groups = [{ id: 1, title: 'EA62GFV' }, { id: 2, title: 'DK67VDP' }]
+    const items = [
+      {
+        id: 1,
+        group: 1,
+        title: 'Transit',
+        start_time: moment(),
+        end_time: moment().add(3.8, 'hour')
+      },
+      {
+        id: 2,
+        group: 1,
+        title: 'Loadin',
+        start_time: moment().add(3.8, 'hour'),
+        end_time: moment().add(4.48, 'hour')
+      },
+      {
+        id: 3,
+        group: 1,
+        title: 'Resiting',
+        start_time: moment().add(4.48, 'hour'),
+        end_time: moment().add(9.13, 'hour')
+      },
+      {
+        id: 4,
+        group: 2,
+        title: 'Transit',
+        start_time: moment().add(3, 'hour'),
+        end_time: moment().add(5.28, 'hour')
+      },
+      {
+        id: 5,
+        group: 2,
+        title: 'Loading',
+        start_time: moment().add(5.28, 'hour'),
+        end_time: moment().add(6.01, 'hour')
+      },
+      {
+        id: 6,
+        group: 2,
+        title: 'Resiting',
+        start_time: moment().add(6.01, 'hour'),
+        end_time: moment().add(8.06, 'hour')
+      }
+    ]
     return (
       <div>
         <GridContainer>
@@ -440,6 +488,14 @@ class Dashboard extends React.Component {
             />
           </GridItem>
         </GridContainer>
+        <GridContainer><GridItem>
+                    <Timeline
+                      groups={groups}
+                      items={items}
+                      defaultTimeStart={moment().add(-24, 'hour')}
+                      defaultTimeEnd={moment().add(24, 'hour')}
+                    /> </GridItem>
+        </GridContainer>  
                     <Dialog
                         classes={{
                           root: classes.center + " " + classes.modalRoot,
@@ -731,7 +787,8 @@ class Dashboard extends React.Component {
                         </DialogContent>
                     </Dialog>
                         
-                    </Dialog>    
+                    </Dialog> 
+                    
       </div>
     );
   }
