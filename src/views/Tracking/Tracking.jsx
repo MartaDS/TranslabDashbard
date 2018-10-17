@@ -1,10 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Timeline from "react-calendar-timeline";
+import moment from "moment";
 // react plugin for creating charts
 // react plugin for creating vector maps
 
 // @material-ui/core components
+import containerResizeDetector from "../../container";
 import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
@@ -30,10 +32,9 @@ import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import "react-calendar-timeline/lib/Timeline.css";
-import moment from 'moment'
 
 import avatar from "assets/img/faces/marc.jpg";
-
+import generateFakeData from "../../generate-fake-data";
 
 import dashboardStyle from "assets/jss/material-dashboard-pro-react/views/dashboardStyle";
 
@@ -57,6 +58,23 @@ class Dashboard extends React.Component {
       noticeModal4: false,
       noticeModal5: false
     };
+    const { groups, items } = generateFakeData()
+    const defaultTimeStart = moment()
+      .startOf('day')
+      .toDate()
+    const defaultTimeEnd = moment()
+      .startOf('day')
+      .add(1, 'day')
+      .toDate()
+    const width = 80
+
+    this.state = {
+      groups,
+      items,
+      defaultTimeStart,
+      defaultTimeEnd,
+      width
+    }
   }
   // to stop the warning of calling setState of unmounted component
   componentWillUnmount() {
@@ -98,55 +116,29 @@ class Dashboard extends React.Component {
   handleChangeIndex = index => {
     this.setState({ value: index });
   };
+
   render() {
     const { classes } = this.props;
-    const groups = [{ id: 1, title: 'EA62GFV' }, { id: 2, title: 'DK67VDP' }]
-    const items = [
-      {
-        id: 1,
-        group: 1,
-        title: 'Transit',
-        start_time: moment(),
-        end_time: moment().add(3.8, 'hour')
-      },
-      {
-        id: 2,
-        group: 1,
-        title: 'Loadin',
-        start_time: moment().add(3.8, 'hour'),
-        end_time: moment().add(4.48, 'hour')
-      },
-      {
-        id: 3,
-        group: 1,
-        title: 'Resiting',
-        start_time: moment().add(4.48, 'hour'),
-        end_time: moment().add(9.13, 'hour')
-      },
-      {
-        id: 4,
-        group: 2,
-        title: 'Transit',
-        start_time: moment().add(3, 'hour'),
-        end_time: moment().add(5.28, 'hour')
-      },
-      {
-        id: 5,
-        group: 2,
-        title: 'Loading',
-        start_time: moment().add(5.28, 'hour'),
-        end_time: moment().add(6.01, 'hour')
-      },
-      {
-        id: 6,
-        group: 2,
-        title: 'Resiting',
-        start_time: moment().add(6.01, 'hour'),
-        end_time: moment().add(8.06, 'hour')
-      }
-    ]
+    const { groups, items, defaultTimeStart, defaultTimeEnd } = this.state
+    
     return (
       <div>
+      <Timeline
+          groups={groups}
+          items={items}
+          sidebarWidth={60}
+          sidebarContent={<div>Vehicle</div>}
+          canMove
+          canResize="right"
+          canSelect
+          itemsSorted
+          itemTouchSendsClick={false}
+          stackItems
+          itemHeightRatio={0.75}
+          resizeDetector={containerResizeDetector}
+          defaultTimeStart={defaultTimeStart}
+          defaultTimeEnd={defaultTimeEnd}
+        />
         <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
             <CustomTabs
@@ -488,13 +480,10 @@ class Dashboard extends React.Component {
             />
           </GridItem>
         </GridContainer>
-        <GridContainer><GridItem>
-                    <Timeline
-                      groups={groups}
-                      items={items}
-                      defaultTimeStart={moment().add(-24, 'hour')}
-                      defaultTimeEnd={moment().add(24, 'hour')}
-                    /> </GridItem>
+        <GridContainer>
+        <GridItem>
+        
+        </GridItem>
         </GridContainer>  
                     <Dialog
                         classes={{
