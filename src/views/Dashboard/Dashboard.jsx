@@ -127,7 +127,6 @@ class Dashboard extends React.Component {
         </GridContainer>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={8}>
-            <h4 className={classes.pageSubcategoriesTitle}></h4>
             <br />
             <NavPills
               color="warning"

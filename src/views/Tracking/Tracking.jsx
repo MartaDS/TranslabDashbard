@@ -1,12 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Timeline from "react-calendar-timeline";
-import moment from "moment";
+import CustomTimeline from "./CustomTimeline";
 // react plugin for creating charts
 // react plugin for creating vector maps
 
 // @material-ui/core components
-import containerResizeDetector from "../../container";
 import FormControl from "@material-ui/core/FormControl";
 import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
@@ -34,7 +32,6 @@ import CardBody from "components/Card/CardBody.jsx";
 import "react-calendar-timeline/lib/Timeline.css";
 
 import avatar from "assets/img/faces/marc.jpg";
-import generateFakeData from "../../generate-fake-data";
 
 import dashboardStyle from "assets/jss/material-dashboard-pro-react/views/dashboardStyle";
 
@@ -58,21 +55,9 @@ class Dashboard extends React.Component {
       noticeModal4: false,
       noticeModal5: false
     };
-    const { groups, items } = generateFakeData()
-    const defaultTimeStart = moment()
-      .startOf('day')
-      .toDate()
-    const defaultTimeEnd = moment()
-      .startOf('day')
-      .add(1, 'day')
-      .toDate()
     const width = 80
 
     this.state = {
-      groups,
-      items,
-      defaultTimeStart,
-      defaultTimeEnd,
       width
     }
   }
@@ -119,26 +104,9 @@ class Dashboard extends React.Component {
 
   render() {
     const { classes } = this.props;
-    const { groups, items, defaultTimeStart, defaultTimeEnd } = this.state
-    
     return (
       <div>
-      <Timeline
-          groups={groups}
-          items={items}
-          sidebarWidth={60}
-          sidebarContent={<div>Vehicle</div>}
-          canMove
-          canResize="right"
-          canSelect
-          itemsSorted
-          itemTouchSendsClick={false}
-          stackItems
-          itemHeightRatio={0.75}
-          resizeDetector={containerResizeDetector}
-          defaultTimeStart={defaultTimeStart}
-          defaultTimeEnd={defaultTimeEnd}
-        />
+      <CustomTimeline/>
         <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
             <CustomTabs
