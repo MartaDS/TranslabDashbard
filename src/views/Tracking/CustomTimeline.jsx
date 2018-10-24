@@ -17,14 +17,12 @@ export default class App extends Component {
       .startOf("day")
       .add(1, "day")
       .toDate();
-    const width = 20;
 
     this.state = {
       groups,
       items,
       defaultTimeStart,
-      defaultTimeEnd,
-      width
+      defaultTimeEnd
     };
   }
 
@@ -86,11 +84,14 @@ export default class App extends Component {
         groups={groups}
         items={items}
         sidebarContent={<div>Vehicle</div>}
-        sidebarWidth={80}
+        sidebarWidth={60}
+        lineHeight={20}
+        headerLabelGroupHeight={20}
+        fullUpdate={false}
         itemsSorted
         itemTouchSendsClick={false}
         stackItems
-        itemHeightRatio={0.75}
+        itemHeightRatio={0.98}
         showCursorLine
         canMove={true}
         canResize={true}
