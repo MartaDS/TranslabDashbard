@@ -92,10 +92,9 @@ class Dashboard extends React.Component {
     return (
       <div>
         <GridContainer justify="center">
-
-            <Card1>
-            </Card1>
-
+        <GridItem xs={12} sm={12} md={8}>
+          <Card1 />
+        </GridItem>
         </GridContainer>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={8}>
@@ -123,10 +122,10 @@ class Dashboard extends React.Component {
                         />
                       </CardBody>
                       <CardFooter stats className={classes.cardFooter}>
-                        <i className={"fas fa-circle " + classes.info} /> Loading/Unloading{` `}
-                        <i className={"fas fa-circle " + classes.warning} /> Deadhead Re-siting{` `}
-                        <i className={"fas fa-circle " + classes.danger} /> Deadhead Stopped{` `}
-                        <i className={"fas fa-circle " + classes.success} /> Transit{` `}
+                        <i className={"fas fa-circle " + classes.info} />Loading{` `}
+                        <i className={"fas fa-circle " + classes.warning} />Re-siting{` `}
+                        <i className={"fas fa-circle " + classes.danger} />Stopped{` `}
+                        <i className={"fas fa-circle " + classes.success} />Transit{` `}
                       </CardFooter>
                     </Card>
                   )
