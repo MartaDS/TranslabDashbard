@@ -5,12 +5,8 @@ import Timeline from "react-calendar-timeline";
 
 import generateFakeData from "../../generate-fake-data";
 
-var minTime = moment()
-  .add(-3, 'months')
-  .valueOf()
-var maxTime = moment()
-  .add(1, 'months')
-  .valueOf()
+const minTime = moment().add(-3, 'months').valueOf()
+const maxTime = moment().add(1, 'months').valueOf()
 
 var keys = {
   groupIdKey: 'id',
@@ -58,6 +54,7 @@ export default class App extends Component {
         ? "red"
         : item.selectedBgColor
       : item.bgColor;
+
     return (
       <div
         {...getItemProps({
