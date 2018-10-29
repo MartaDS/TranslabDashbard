@@ -103,7 +103,7 @@ class Dashboard extends React.Component {
           <GridItem xs={3}>
             <Card1>
               <CardBody style={{ textAlign: "center", padding: "20px 0px" }}>
-                <h3 className={classes.cardTitle}>{`113163 min`}</h3>
+                <h3 className={classes.cardTitle}>{`1886h`}</h3>
                 <p className={classes.cardCategory}>{`Wasted`}</p>
               </CardBody>
             </Card1>

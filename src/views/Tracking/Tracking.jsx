@@ -17,15 +17,9 @@ class Tracking extends React.Component {
 
   render() {
     return (
-      <div><GridContainer>
-      <GridItem>
-      <Card>
-      <CardBody style={{ textAlign: "center", padding: "20px 0px" }}>
+      <div style={{ background: "white", padding: "10px 10px", borderRadius: "10px", margin: "10px 0" }}>
       <CustomTimeline/>
-      </CardBody>
-      </Card>
-      </GridItem>  
-      </GridContainer></div>
+      </div>
     );
   }
 }
