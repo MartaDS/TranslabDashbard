@@ -46,7 +46,7 @@ function NestedGrid(props) {
   return (
     <div className={classes.root}>
       <Grid container spacing={1}>
-        <Grid container item xs={12} spacing={16}>
+        <Grid container item xs={12} spacing={14}>
           <FormRow classes={classes} />
         </Grid>
       </Grid>
