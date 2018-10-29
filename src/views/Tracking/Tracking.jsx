@@ -17,7 +17,7 @@ class Tracking extends React.Component {
 
   render() {
     return (
-      <div style={{ background: "white", padding: "10px 10px", borderRadius: "10px", margin: "10px 0" }}>
+      <div style={{ background: "white", margin: "10px 0"}}>
       <CustomTimeline/>
       </div>
     );

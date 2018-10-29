@@ -111,6 +111,8 @@ export default class App extends Component {
         itemsSorted
         itemTouchSendsClick={false}
         stackItems
+        minZoom={7 * 24 * 60 * 60 * 1000}
+        maxZoom={7 * 24 * 60 * 60 * 1000}
         itemHeightRatio={0.98}
         showCursorLine
         canMove={false}
