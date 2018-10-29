@@ -92,38 +92,10 @@ class Dashboard extends React.Component {
     return (
       <div>
         <GridContainer justify="center">
-          <GridItem xs={3}>
+
             <Card1>
-              <CardBody style={{ textAlign: "center", padding: "20px 0px" }}>
-                <h3 className={classes.cardTitle}>{`£90530`}</h3>
-                <p className={classes.cardCategory}>{`Wasted`}</p>
-              </CardBody>
             </Card1>
-          </GridItem>
-          <GridItem xs={3}>
-            <Card1>
-              <CardBody style={{ textAlign: "center", padding: "20px 0px" }}>
-                <h3 className={classes.cardTitle}>{`1886h`}</h3>
-                <p className={classes.cardCategory}>{`Wasted`}</p>
-              </CardBody>
-            </Card1>
-          </GridItem>
-          <GridItem xs={3}>
-            <Card1>
-              <CardBody style={{ textAlign: "center", padding: "20px 0px" }}>
-                <h3 className={classes.cardTitle}>{`22%`}</h3>
-                <p className={classes.cardCategory}>{`Performance`}</p>
-              </CardBody>
-            </Card1>
-          </GridItem>
-          <GridItem xs={3}>
-            <Card1>
-              <CardBody style={{ textAlign: "center", padding: "20px 0px" }}>
-                <h3 className={classes.cardTitle}>{`9%`}</h3>
-                <p className={classes.cardCategory}>{`Time On-Charge`}</p>
-              </CardBody>
-            </Card1>
-          </GridItem>
+
         </GridContainer>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={8}>
