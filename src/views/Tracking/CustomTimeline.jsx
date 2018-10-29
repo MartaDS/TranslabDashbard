@@ -6,10 +6,10 @@ import Timeline from "react-calendar-timeline";
 import generateFakeData from "../../generate-fake-data";
 
 var minTime = moment()
-  .add(-6, 'months')
+  .add(-3, 'months')
   .valueOf()
 var maxTime = moment()
-  .add(6, 'months')
+  .add(1, 'months')
   .valueOf()
 
 var keys = {
@@ -28,7 +28,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
 
-    const { groups, items } = generateFakeData(100, 5000);
+    const { groups, items } = generateFakeData();
     const defaultTimeStart = moment()
       .startOf('month')
       .toDate().valueOf()
@@ -113,8 +113,8 @@ export default class App extends Component {
         stackItems
         itemHeightRatio={0.98}
         showCursorLine
-        canMove={true}
-        canResize={true}
+        canMove={false}
+        canResize={false}
         defaultTimeStart={defaultTimeStart}
         defaultTimeEnd={defaultTimeEnd}
         itemRenderer={this.itemRenderer}
