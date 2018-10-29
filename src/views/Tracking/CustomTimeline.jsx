@@ -5,18 +5,36 @@ import Timeline from "react-calendar-timeline";
 
 import generateFakeData from "../../generate-fake-data";
 
+var minTime = moment()
+  .add(-6, 'months')
+  .valueOf()
+var maxTime = moment()
+  .add(6, 'months')
+  .valueOf()
+
+var keys = {
+  groupIdKey: 'id',
+  groupTitleKey: 'title',
+  groupRightTitleKey: 'rightTitle',
+  itemIdKey: 'id',
+  itemTitleKey: 'title',
+  itemDivTitleKey: 'title',
+  itemGroupKey: 'group',
+  itemTimeStartKey: 'start',
+  itemTimeEndKey: 'end'
+}
+
 export default class App extends Component {
   constructor(props) {
     super(props);
 
-    const { groups, items } = generateFakeData();
+    const { groups, items } = generateFakeData(100, 5000);
     const defaultTimeStart = moment()
-      .startOf("day")
-      .toDate();
+      .startOf('month')
+      .toDate().valueOf()
     const defaultTimeEnd = moment()
-      .startOf("day")
-      .add(1, "day")
-      .toDate();
+      .endOf('month')
+      .toDate().valueOf()
 
     this.state = {
       groups,
@@ -25,6 +43,7 @@ export default class App extends Component {
       defaultTimeEnd
     };
   }
+
 
   itemRenderer = ({
     item,
@@ -75,6 +94,7 @@ export default class App extends Component {
       </div>
     );
   };
+
 
   render() {
     const { groups, items, defaultTimeStart, defaultTimeEnd } = this.state;

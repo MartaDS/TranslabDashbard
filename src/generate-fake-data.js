@@ -31,7 +31,7 @@ const groups = [{id:1,title:'EA62GFV'},
 {id:28,title:'DF15ESV'},
 {id:29,title:'DG64VRM'},
 {id:30,title:'DG64KGA'}]
-    const items = [
+const items = [
 {id:1,group:1,title:'transit',bgColor: '#4caf50',start_time: moment("2018-10-11T05:58:00"),end_time: moment("2018-10-11T09:48:00")},
 {id:2,group:1,title:'loading',bgColor: '#00acc1',start_time: moment("2018-10-11T09:48:00"),end_time: moment("2018-10-11T10:29:00")},
 {id:3,group:1,title:'resiting',bgColor: '#ff9800',start_time: moment("2018-10-11T10:29:00"),end_time: moment("2018-10-11T15:08:00")},
