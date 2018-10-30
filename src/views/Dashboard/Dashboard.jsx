@@ -110,7 +110,7 @@ class Dashboard extends React.Component {
                     <Card>
                       <CardHeader>
                         <h4 className={classes.cardTitle} style={{ textAlign: "center"}}>
-                          Overall Performance
+                          Overall Performance:
                         </h4>
                        
                       </CardHeader>
@@ -137,7 +137,7 @@ class Dashboard extends React.Component {
                     <Card>
                       <CardHeader>
                         <h4 className={classes.cardTitle} style={{ textAlign: "center"}}>
-                          Performance Distribution
+                          Performance Distribution:
                         </h4>
                       </CardHeader>
                       <CardBody>
