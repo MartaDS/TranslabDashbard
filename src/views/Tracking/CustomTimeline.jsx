@@ -69,7 +69,10 @@ export default class App extends Component {
             borderRightWidth: itemContext.selected ? 1 : 1
           },
           onMouseDown: () => {
-            console.log("on item click", item);
+            console.log("on click", item);
+          },
+          onModalOkClick: () => {
+            this.setState({clickedItem: null})
           }
         })}
       >
@@ -94,7 +97,7 @@ export default class App extends Component {
 
 
   render() {
-    const { groups, items, defaultTimeStart, defaultTimeEnd } = this.state;
+    const { groups, items, defaultTimeStart, defaultTimeEnd, clickedItem } = this.state;
 
     return (
       <Timeline
@@ -117,7 +120,8 @@ export default class App extends Component {
         defaultTimeStart={defaultTimeStart}
         defaultTimeEnd={defaultTimeEnd}
         itemRenderer={this.itemRenderer}
+        clickedItem={this.clickedItem}
       />
-    );
+      );
   }
 }
