@@ -70,9 +70,7 @@ export default class App extends Component {
           },
           onMouseDown: () => {
             console.log("on click", item);
-          },
-          onModalOkClick: () => {
-            this.setState({clickedItem: null})
+            this.setState({clickedItem: item});
           }
         })}
       >
