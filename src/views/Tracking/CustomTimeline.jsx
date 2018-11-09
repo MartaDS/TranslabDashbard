@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import moment from "moment";
+import Modal from "react-modal";
 
 import Timeline from "react-calendar-timeline";
 
 import generateFakeData from "../../generate-fake-data";
+
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Dialog from '@material-ui/core/Dialog';
 
 const minTime = moment().add(-3, 'months').valueOf()
 const maxTime = moment().add(1, 'months').valueOf()
@@ -36,11 +42,13 @@ export default class App extends Component {
       groups,
       items,
       defaultTimeStart,
-      defaultTimeEnd
+      defaultTimeEnd,
+      clickedItemId: 0,
+      openState: false,
+      clickedItem: items[0]
     };
   }
-
-
+  
   itemRenderer = ({
     item,
     timelineContext,
@@ -93,12 +101,24 @@ export default class App extends Component {
     );
   };
 
+   handleClickOpen = (itemId) => {
+    //you can use this instead of itemSelected if you prefer
+  };
+  itemSelected = (itemId) => {
+    this.setState({ openState: true, clickedItemId: itemId});
+  };
+  handleClose = () => {
+    this.setState({ openState: false });
+  };
+
 
   render() {
-    const { groups, items, defaultTimeStart, defaultTimeEnd, clickedItem } = this.state;
+    const { groups, items, defaultTimeStart, defaultTimeEnd, clickedItem, clickedItemId, openState} = this.state;
 
     return (
+      <div>
       <Timeline
+        ref="timeline"
         groups={groups}
         items={items}
         sidebarContent={<div>Vehicle</div>}
@@ -118,8 +138,23 @@ export default class App extends Component {
         defaultTimeStart={defaultTimeStart}
         defaultTimeEnd={defaultTimeEnd}
         itemRenderer={this.itemRenderer}
-        clickedItem={this.clickedItem}
+        onItemClick={this.itemId}
+        onItemClick={this.itemClicked}
+        onItemSelect={this.itemSelected}
       />
+      <Dialog ref="popup" onClose={this.handleClose} open={openState} aria-labelledby="simple-dialog-title"  >
+        <DialogTitle id="simple-dialog-title">{clickedItemId}</DialogTitle>
+          <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            start: {items[clickedItemId].start} |
+            start coord: {items[clickedItemId].startcoord} |
+            finish: {items[clickedItemId].finish} |
+            finish coord: {items[clickedItemId].finishcoord} |
+            duration: {items[clickedItemId].duration}
+          </DialogContentText>
+          </DialogContent>
+      </Dialog>
+      </div>
       );
   }
 }
