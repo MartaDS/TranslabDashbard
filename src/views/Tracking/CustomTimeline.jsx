@@ -143,14 +143,13 @@ export default class App extends Component {
         onItemSelect={this.itemSelected}
       />
       <Dialog ref="popup" onClose={this.handleClose} open={openState} aria-labelledby="simple-dialog-title"  >
-        <DialogTitle id="simple-dialog-title">{clickedItemId}</DialogTitle>
+        <DialogTitle id="simple-dialog-title">DURATION: {items[clickedItemId].duration}</DialogTitle>
           <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            start: {items[clickedItemId].start} |
-            start coord: {items[clickedItemId].startcoord} |
-            finish: {items[clickedItemId].finish} |
-            finish coord: {items[clickedItemId].finishcoord} |
-            duration: {items[clickedItemId].duration}
+            <p><strong>START:</strong> {items[clickedItemId].start}</p>
+            <p><strong>coord:</strong> {items[clickedItemId].startcoord}</p>
+            <p><strong>FINISH:</strong> {items[clickedItemId].finish}</p>
+            <p><strong>coord:</strong> {items[clickedItemId].finishcoord}</p>
           </DialogContentText>
           </DialogContent>
       </Dialog>
