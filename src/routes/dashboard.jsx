@@ -18,6 +18,12 @@ var dashRoutes = [
     name: "Tracking",
     icon: Timeline,
     component: Tracking
+  },
+  {
+    redirect: true,
+    path: "/",
+    pathTo: "/dashboard",
+    name: "Performance"
   }
 ];
 export default dashRoutes;
