@@ -93,6 +93,7 @@ class Dashboard extends React.Component {
       <div>
         <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
+        <p>Goods Commercial</p>
           <Card3 />
         </GridItem>
         </GridContainer>
@@ -110,7 +111,7 @@ class Dashboard extends React.Component {
                     <Card>
                       <CardHeader>
                         <h4 className={classes.cardTitle} style={{ textAlign: "center"}}>
-                          Overall Performance:
+                          GC Overall Performance:
                         </h4>
                        
                       </CardHeader>
@@ -137,7 +138,7 @@ class Dashboard extends React.Component {
                     <Card>
                       <CardHeader>
                         <h4 className={classes.cardTitle} style={{ textAlign: "center"}}>
-                          Performance Distribution:
+                          GC Performance Distribution:
                         </h4>
                       </CardHeader>
                       <CardBody>

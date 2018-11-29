@@ -17,61 +17,61 @@ import Timeline from "@material-ui/icons/Timeline";
 var dashRoutes = [
   {
     path: "/dashboard",
-    name: "MLS Performance",
+    name: "Performance Dashboard 1",
     icon: Assessment,
     component: Dashboard
   },
   {
     path: "/dashboard1",
-    name: "GLS Performance",
+    name: "Performance Dashboard 2",
     icon: Assessment,
     component: Dashboard1
   },
   {
     path: "/dashboard2",
-    name: "GC Performance",
+    name: "Performance Dashboard 3",
     icon: Assessment,
     component: Dashboard2
   },
   {
     path: "/dashboard3",
-    name: "ALC Performance",
+    name: "Performance Dashboard 4",
     icon: Assessment,
     component: Dashboard3
   },
   {
     path: "/dashboard4",
-    name: "BRS Performance",
+    name: "Performance Dashboard 5",
     icon: Assessment,
     component: Dashboard4
   },
    {
     path: "/tracking",
-    name: "MLS Tracking",
+    name: "Journey Data 1",
     icon: Timeline,
     component: Tracking
   },
   {
     path: "/tracking1",
-    name: "GLS Tracking",
+    name: "Journey Data 2",
     icon: Timeline,
     component: Tracking1
   },
   {
     path: "/tracking2",
-    name: "GC Tracking",
+    name: "Journey Data 3",
     icon: Timeline,
     component: Tracking2
   },
   {
     path: "/tracking3",
-    name: "ALC Tracking",
+    name: "Journey Data 4",
     icon: Timeline,
     component: Tracking3
   },
   {
     path: "/tracking4",
-    name: "BRS Tracking",
+    name: "Journey Data 5",
     icon: Timeline,
     component: Tracking4
   },

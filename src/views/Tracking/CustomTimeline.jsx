@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import moment from "moment";
-import Modal from "react-modal";
 
 import Timeline from "react-calendar-timeline";
 
@@ -10,21 +9,6 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Dialog from '@material-ui/core/Dialog';
-
-const minTime = moment().add(-3, 'months').valueOf()
-const maxTime = moment().add(1, 'months').valueOf()
-
-var keys = {
-  groupIdKey: 'id',
-  groupTitleKey: 'title',
-  groupRightTitleKey: 'rightTitle',
-  itemIdKey: 'id',
-  itemTitleKey: 'title',
-  itemDivTitleKey: 'title',
-  itemGroupKey: 'group',
-  itemTimeStartKey: 'start',
-  itemTimeEndKey: 'end'
-}
 
 export default class App extends Component {
   constructor(props) {
@@ -113,7 +97,7 @@ export default class App extends Component {
 
 
   render() {
-    const { groups, items, defaultTimeStart, defaultTimeEnd, clickedItem, clickedItemId, openState} = this.state;
+    const { groups, items, defaultTimeStart, defaultTimeEnd, clickedItemId, openState} = this.state;
 
     return (
       <div>
@@ -139,7 +123,6 @@ export default class App extends Component {
         defaultTimeEnd={defaultTimeEnd}
         itemRenderer={this.itemRenderer}
         onItemClick={this.itemId}
-        onItemClick={this.itemClicked}
         onItemSelect={this.itemSelected}
       />
       <Dialog ref="popup" onClose={this.handleClose} open={openState} aria-labelledby="simple-dialog-title"  >

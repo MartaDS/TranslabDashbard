@@ -4,21 +4,20 @@ import CustomTimeline from "./CustomTimeline2";
 import withStyles from "@material-ui/core/styles/withStyles";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
-import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
 
 import "react-calendar-timeline/lib/Timeline.css";
 import dashboardStyle from "assets/jss/material-dashboard-pro-react/views/dashboardStyle";
 
 class Tracking extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
-      <div style={{ background: "white", margin: "10px 0"}}>
-      <GridContainer><CustomTimeline/></GridContainer>
+       <div style={{ background: "white", margin: "10px 0"}}>
+      <GridContainer><GridItem xs={12} sm={12} md={12}>
+                        <h4 style={{ textAlign: "center"}}>
+                          GC Overall Performance:
+                        </h4></GridItem>
+                        <CustomTimeline/></GridContainer>
       </div>
     );
   }
