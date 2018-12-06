@@ -586,8 +586,8 @@ const colouredLinesChart = {
 
 const pieChart = {
   data: {
-    labels: ["40%", "9%", "8%", "44%"],
-    series: [40,9,8,44]
+    labels: ["28%", "3%", "15%", "54%"],
+    series: [28,3,15,54]
   },
   options: {
     height: "230px"

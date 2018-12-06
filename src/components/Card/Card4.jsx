@@ -21,16 +21,16 @@ function FormRow(props) {
   return (
     <React.Fragment>
       <Grid item xs={3}>
-        <Paper className={classes.paper}>{`£82K`}<p style={{fontWeight: "bold"}}>{`Money`}<br />{`Wasted`}</p></Paper>
+        <Paper className={classes.paper}>{`£113K`}<p style={{fontWeight: "bold"}}>{`Money`}<br />{`Wasted`}</p></Paper>
       </Grid>
       <Grid item xs={3}>
-        <Paper className={classes.paper}>{`1708h`}<br /><p style={{fontWeight: "bold"}}>{`Time`}<br />{`Wasted`}</p></Paper>
+        <Paper className={classes.paper}>{`2364h`}<br /><p style={{fontWeight: "bold"}}>{`Time`}<br />{`Wasted`}</p></Paper>
       </Grid>
       <Grid item xs={3}>
-        <Paper className={classes.paper}>{`20%`}<br /><p style={{fontWeight: "bold"}}>{`Overall`}<br />{`Perform.`}</p></Paper>
+        <Paper className={classes.paper}>{`43%`}<br /><p style={{fontWeight: "bold"}}>{`Overall`}<br />{`Perform.`}</p></Paper>
       </Grid>
       <Grid item xs={3}>
-        <Paper className={classes.paper}>{`29%`}<br /><p style={{fontWeight: "bold"}}>{`On`}<br />{`Charge`}</p></Paper>
+        <Paper className={classes.paper}>{`39%`}<br /><p style={{fontWeight: "bold"}}>{`On`}<br />{`Charge`}</p></Paper>
       </Grid>
     </React.Fragment>
   );
